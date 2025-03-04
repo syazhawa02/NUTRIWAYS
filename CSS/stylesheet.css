@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* HOME PAGE */
+.home-page {
+    background: url('/images/header8.jpg') center calc(10% - 50px) / cover no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+/* Blurry overlay */
+.home-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2E5902;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section (Home Page) */
+.hero {
+    color: #2E5902;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 80px;
+    color: #FFFFFF;
+    text-shadow: 3px 3px 8px black;
+    font-weight: bold;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.6);
+    color: #2E5902;
+    font-size: 18px;
+    font-weight: bold;
+    border: 3px solid #2E5902;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #2E5902;
+    color: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ABOUT US PAGE */
+.about-page {
+    background-color: white;
+    text-align: center;
+  
+}
+
+/* Header (Only for About Us) */
+.about-page header {
+    background: #2E5902;
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.about-page .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2E5902;
+    font-family: 'Poppins', sans-serif;
+}
+/* Navigation (Only for About Us) */
+.about-page nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.about-page nav ul li {
+    margin: 0 15px;
+}
+
+.about-page nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section (Only for About Us) */
+.about-page .hero h2 {
+    color: #2E5902;
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.about-page .hero p {
+    color: #333;
+    font-size: 16px;
+    margin-top: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styled Container (Same as Button but Not a Button) */
+.about-page .about-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.6);
+    color: #2E5902;
+    font-size: 18px;
+    font-weight: bold;
+    border: 3px solid #2E5902;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 70%; /* Adjusts vertical position */
+    left: 50%; /* Adjusts horizontal position */
+    transform: translate(-50%, -50%); /* Centers the button */
+}
+.about-page img {
+    width: 100%;  /* Ensures full width */
+    height: 600px; /* Adjust this value */
+    object-fit: cover; /* Prevents stretching */
+    padding-bottom: 30px;
+}
+.about-page h2 {
+    padding-bottom: 10px;
+}
+.about-page p {
+    margin-bottom: 10px;
+}
+/* About Sections */
+.about-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eaf4d3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    width: 100%;
+    padding: 20px;
+}
+
+.text h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Adjust spacing below h2 */
+    color:#07540f ;
+}
+
+.text p {
+    font-size: 16px;
+    margin-top: 5px; /* Adjust spacing above p */
+    line-height: 1.5; /* Improve readability */
+}
+
+.image {
+     width: 35%;  /* Adjust image width */
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    width: 100%;
+    height: 250px;    /* Fixed height for uniformity */
+    object-fit: cover; /* Crops images to maintain aspect ratio */
+    border-radius: 10px;
+}
