@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools & Calculations</title>
+    <link rel="stylesheet" href="CSS/tools_calc.css">
+</head>
+    <header>
+        <div class="logo">NutriWays</div>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="tools_calculaltions.html">Tools & Calculations</a></li>
+                <li><a href="healthy_eating.html">Healthy Eating</a></li>
+                <li><a href="ask_share.html">Ask & Share</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<body> 
+    <section class="tools-header">
+        <img src="images/scale2.png" alt="BMI Scale">
+    </section>
+
+    <section class="bmi">
+        <h1>BMI Calculator</h1>
+        <hr>
+        <h2>What is BMI</h2>
+        <p>The Body Mass Index (BMI) is a measure used to determine whether a person has a healthy weight, is underweight, or overweight. Deviating from the ideal weight range may increase health risks.</p>
+        
+        <h2>BMI Limitations</h2>
+        <p>BMI does not account for body composition and may not be suitable for pregnant women, children, certain ethnic groups, or individuals with a muscular build. Additionally, age can affect BMI readings.</p>
+        
+        <h2>How to Calculate BMI?</h2>
+        <p>Choose your gender and preferred measurement units in the BMI calculator below. Adjust the sliders to input your height and weight, then click 'calculate' to determine your BMI. The results will provide insights into what your BMI indicates.</p>
+    </section>
+    
+    <section class="bmi-calculator">
+        <div class="input-group">
+            <label for="height">HEIGHT IN CMS:</label>
+            <input type="number" id="height">
+        </div>
+
+        <div class="input-group">
+            <label for="weight">WEIGHT IN KGS:</label>
+            <input type="number" id="weight">
+        </div>
+
+        <button class="calculate-btn" onclick="calculateBMI()">Calculate</button>
+
+        <div class="results">
+            <table>
+                <tr>
+                    <th colspan="2">Your Result</th>
+                </tr>
+                <tr>
+                    <td>Your BMI</td>
+                    <td id="bmi-result">-</td>
+                </tr>
+                <tr>
+                    <td>Suggested Healthy Weight Range</td>
+                    <td id="healthy-range">-</td>
+                </tr>
+                <tr>
+                    <td>Your Category</td>
+                    <td id="bmi-category">-</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+  
+    <section class="container">
+        
+        <div class="input-section">
+            <div class="gender-selection">
+                <button id="male" class="gender-btn selected">♂ Male</button>
+                <button id="female" class="gender-btn">♀ Female</button>
+            </div>
+
+            <div class="input-group">
+                <label for="height_cal">Height in cms:</label>
+                <input type="number" id="height_cal">
+            </div>
+            
+            <div class="input-group">
+                <label for="weight_cal">Weight in kgs:</label>
+                <input type="number" id="weight_cal">
+            </div>
+            
+            <div class="input-group">
+                <label for="age_cal">Age:</label>
+                <input type="number" id="age_cal">
+            </div>    
+                    
+            <div class="activity-level">
+                <label for="activity">Activity Level:</label>
+                <select id="activity">
+                    <option value="1">1 - Sedentary (Little to no exercise)</option>
+                    <option value="2">2 - Light activity (Light exercise 1-3 days a week)</option>
+                    <option value="3">3 - Moderate activity (Moderate exercise 3-5 days a week)</option>
+                    <option value="4">4 - Very active (Hard exercise 6-7 days a week)</option>
+                    <option value="5">5 - Super active (Athlete-level training)</option>
+                </select>
+            </div>
+            
+
+            <button class="calculate-btn" onclick="calculateCalories()">Calculate</button>
+        </div>
+
+        <!-- Right Side: Results -->
+        <div class="results-section">
+            <h3>Results:</h3>
+            <div class="result-group">
+                <label>Total Calories:</label>
+                <input type="text" id="total-calories" disabled>
+            </div>
+            <div class="result-group">
+                <label>Total Carbohydrates:</label>
+                <input type="text" id="total-carbs" disabled>
+            </div>
+        </div>
+    </section>
+    <script src="/JS/calculateBMI.js"></script>
+    <script src="/JS/calculateCalories.js"></script>
+    
+    <footer> 
+        <p>&copy; 2025 NutriNest. All rights reserved.</p>
+    </footer>
+</body>
+</html>
